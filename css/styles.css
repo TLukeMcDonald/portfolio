@@ -1,10 +1,15 @@
 body,
 html {
+ /* z-index: -5;
+  position: relative;*/
   background-color: #ddd;
   color: #444;
   font-family: sans-serif;
   height: 100vh;
   margin: 0 auto;
+    scroll-behavior: smooth;
+      transition: all 1s ease;
+
 
 }
 
@@ -12,12 +17,48 @@ html {
   overflow-x: hidden;
 }
 
+#myVideo {
+    top: 0vh;
+    width: 100vw;
+    height: 85vh;
+    object-fit: fill;
+    z-index: 10;
+    position: absolute;
+}
+
+#crest {
+  z-index: 50;
+  padding-top: 10vh;
+  position: absolute;
+  max-width: 80vw;
+  height: 70vh;
+}
+
+#header-title {
+  z-index: 50;
+  position: fixed;
+  height: 60vw;
+  text-decoration: none;
+}
+
+#crest-background{
+    z-index: 40;
+    background-color:  rgba(204,36,47,.8);
+  position: absolute;
+  height: 85vh;
+  width: 100vw;
+
+}
+
+
 header {
+  z-index: 20;
+  position: relative;
   -ms-align-items: center;
   align-items: center;
-  background-color:  #CC242F;
-  background-image: url(../img/crest1.svg);
-  background-repeat: no-repeat;
+  background-color:  rgba(204,36,47,.8);
+/*  background-image: url(../img/crest1.svg);
+*/  background-repeat: no-repeat;
   background-position: center;
   background-size: auto 75%;
   display: -webkit-flex;
@@ -62,6 +103,8 @@ nav.desktop {
   position: absolute;
   width: 100%;
   z-index: 4;
+    transition: all 1s ease;
+    scroll-behavior: smooth;
 }
 
 .nav-group {
@@ -78,6 +121,7 @@ nav.desktop {
   position: absolute;
   padding: 0 20px;
   width: 20%;
+    scroll-behavior: smooth;
 }
 
 .nav-group:last-of-type {
@@ -98,6 +142,7 @@ nav.desktop {
   justify-content: center;
   text-decoration: none;
   width: 50%;
+    scroll-behavior: smooth;
 }
 section {
     scroll-behavior: smooth;
@@ -551,11 +596,14 @@ span {
 }
 
 
-
+.icons {
+  width: 30px;
+  max-height: 40px;
+}
 /*bounce*/
 .bounce:hover {
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
 }
 
 /* Scroll down indicator (bouncing) */
@@ -605,6 +653,7 @@ span {
 }
 
 .label {
+  text-align: center;
   font-size: 1.2em;
   background-color: crimson;
   color: white;
