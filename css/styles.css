@@ -7,8 +7,8 @@ html {
   font-family: sans-serif;
   height: 100vh;
   margin: 0 auto;
-    scroll-behavior: smooth;
-      transition: all 1s ease;
+  scroll-behavior: smooth;
+  transition: all 1s ease;
 
 
 }
@@ -34,27 +34,32 @@ html {
   height: 70vh;
 }
 
-#header-title {
+.header-title {
+  text-align: center;
   z-index: 80;
   position: fixed;
   height: 5vh;
-  text-decoration: none;
+}
+.header-link {
+   color: white;
+   text-decoration: none;
 }
 
 #crest-background{
     z-index: 40;
-    background-color:  rgba(204,36,47,.7);
+    background-color:  rgba(204,36,47,.8);
   position: absolute;
   height: 85vh;
   width: 100vw;
 }
 #crest-background2{
-    z-index: 70;
-    background-color:  rgba(204,36,47,.3);
+  z-index: 70;
+  background-color:  rgba(204,36,47,.0);
   position: absolute;
   height: 85vh;
   width: 100vw;
 }
+
 
 header {
   z-index: 20;
@@ -62,8 +67,8 @@ header {
   -ms-align-items: center;
   align-items: center;
   background-color:  rgba(204,36,47,.8);
-/*  background-image: url(../img/crest1.svg);
-*/  background-repeat: no-repeat;
+/*background-image: url(../img/crest1.svg);*/
+  background-repeat: no-repeat;
   background-position: center;
   background-size: auto 75%;
   display: -webkit-flex;
@@ -87,7 +92,9 @@ h1 {
   margin: 0 auto;
   top: 20px;
   text-align: center;
-  z-index: 5;
+  z-index: 80;
+  text-decoration: none;
+  color: white;
 }
 
 nav.desktop {
@@ -594,17 +601,20 @@ footer {
   display: -o-flex;
   display: flex;
 }
+.svg-icon path {
+  fill: #ff0000;
+}
 
 span {
   font-weight: bold;
 }
 
-.resume {
+/*.resume {
   color: #444;
   cursor: pointer;
   margin-top: 20px;
   text-decoration: none;
-}
+}*/
 
 .icons {
   width: 30px;
