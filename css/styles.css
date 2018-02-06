@@ -670,12 +670,16 @@ span {
      color: black;
    text-decoration: none;
 }
-
+#crest2 {
+  width: 10vw;
+  margin: auto;
+  justify-content: center;
+}
 
 .modalDialog {
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
-  top: 0;
+  top: -10vh;
   right: 0;
   bottom: 0;
   left: 0;
@@ -686,6 +690,7 @@ span {
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   pointer-events: none;
+
 }
 .modalDialog:target {
   opacity:1;
@@ -693,7 +698,9 @@ span {
 }
 
 .modalDialog > div {
-  width: 400px;
+  width: 70vw;
+  max-height: 85vh;
+  overflow-y: auto;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
@@ -702,6 +709,7 @@ span {
   background: -moz-linear-gradient(#fff, #999);
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999);
+
 }
 
 .close {
@@ -709,9 +717,9 @@ span {
   color: #FFFFFF;
   line-height: 25px;
   position: absolute;
-  right: -12px;
+  right: 15px;
   text-align: center;
-  top: -10px;
+  top: 15px;
   width: 24px;
   text-decoration: none;
   font-weight: bold;
@@ -723,15 +731,16 @@ span {
   box-shadow: 1px 1px 3px #000;
 }
 
-.close:hover { background: #00d9ff; }
+.close:hover { background: rgb(204,36,47); }
 
 table {
-  width: 100%;
-  border-radius: 20px;
+  max-width: 100%;
   border-spacing: 5px;
+  margin: auto;
 }
 table, th, td {
-  border: 1px solid black;padding: 15px;
+  border: 1px solid black;
+  padding: 5px;
   border-collapse: collapse;
 }
 
