@@ -675,7 +675,10 @@ span {
   margin: auto;
   justify-content: center;
 }
-
+ .container{
+  display: flex;
+  flex-direction: column;
+ }
 .modalDialog {
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
@@ -733,14 +736,31 @@ span {
 
 .close:hover { background: rgb(204,36,47); }
 
+
 table {
-  max-width: 100%;
-  border-spacing: 5px;
-  margin: auto;
-}
-table, th, td {
-  border: 1px solid black;
-  padding: 5px;
-  border-collapse: collapse;
+border: 1px solid black;
+border-collapse: separate;
+border-left: 0;
+border-radius: 10px;
+border-spacing: 0px;
+margin: auto;
 }
 
+tr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+th, td {
+padding: 5px 4px 6px 4px;
+text-align: left;
+vertical-align: top;
+border-left: 1px solid black;
+}
+td {
+border-top: 1px solid black;
+}
+tr:first-child td:first-child{border-radius: 10px 0 0 0;}
+tr:first-child td:last-child {border-radius: 0 10px 0 0;}
+tr:last-child td:last-child  {border-radius: 0 0 10px 0;}
+tr:last-child td:first-child {border-radius: 0 0 0 10px;}
