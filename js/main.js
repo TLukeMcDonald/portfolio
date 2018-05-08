@@ -137,7 +137,7 @@ $(() => {
         // default side is left
         let side = 'left';
         // get width, top, and bottom
-        const width = $($project).width();
+        const width = $($project).width()/2;
         const top = $($project).parent().offset().top;
         const bottom = top + $($project).parent().height();
         // if it is even
