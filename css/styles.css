@@ -20,7 +20,7 @@ html {
 #myVideo {
     top: 0vh;
     width: 100vw;
-    height: 85vh;
+    height: 80vh;
     object-fit: fill;
     z-index: 10;
     position: absolute;
@@ -28,9 +28,9 @@ html {
 
 #crest {
   z-index: 50;
-  padding-top: 10vh;
+  padding-top: 8vh;
   position: absolute;
-  max-width: 80vw;
+  max-width: 75vw;
   height: 70vh;
 }
 
@@ -53,14 +53,14 @@ html {
     z-index: 40;
     background-color:  rgba(204,36,47,.8);
   position: absolute;
-  height: 85vh;
+  height: 80vh;
   width: 100vw;
 }
 #crest-background2{
   z-index: 70;
   background-color:  rgba(204,36,47,.0);
   position: absolute;
-  height: 85vh;
+  height: 80vh;
   width: 100vw;
 }
 
@@ -71,7 +71,6 @@ header {
   -ms-align-items: center;
   align-items: center;
   background-color:  rgba(204,36,47,.8);
-/*background-image: url(../img/crest1.svg);*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 75%;
@@ -85,7 +84,7 @@ header {
   -ms-flex-direction: column;
   -o-flex-direction: column;
   flex-direction: column;
-  height: 85vh;
+  height: 80vh;
   margin: 0 auto;
 }
 
@@ -160,10 +159,6 @@ nav.desktop {
   width: 50%;
     scroll-behavior: smooth;
 }
-/*section {
-    scroll-behavior: smooth;
-}*/
-
 
 nav.mobile {
   display: -webkit-flex;
@@ -260,6 +255,7 @@ h2 {
 }
 
 
+ /* ###### Skills Section ###### */
 .skills-section {
   display: -webkit-flex;
   display: -moz-flex;
@@ -310,8 +306,6 @@ h2 {
 }
 
 .skill-img {
-/*  transform: rotateY(90deg);
-  transition: all 1s ease;*/
   width: 50%;
 }
 
@@ -381,8 +375,17 @@ h2 {
 }
 
 
+/* ######## Project Section ######## */
 .project-section {
-  padding: 0 30px;
+  padding: 40px 20px;
+  max-width: 1220px;
+  margin: auto;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .project-item {
@@ -397,14 +400,15 @@ h2 {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  min-height: 70vh;
+  min-height: 45vh;
   margin: 0 auto;
   margin-bottom: 20px;
-  max-width: 1200px;
+  max-width: 48%;
   overflow: hidden;
 }
-.top {
-  background-image: url(../img/beer3.jpg);
+
+.nycrecords {
+  background-image: url(../img/nycrecords.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -418,8 +422,11 @@ h2 {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-
+.top {
+  background-image: url(../img/beer3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .project-item:nth-of-type(even) {
   -webkit-justify-content: flex-end;
@@ -495,6 +502,7 @@ h2 {
 }
 
 
+ /* ###### About Me Section  ###### */
 .about-section {
   -ms-align-items: center;
   align-items: center;
@@ -516,7 +524,7 @@ h2 {
   -o-justify-content: center;
   justify-content: center;
   margin: 0 auto;
-  min-height: 70vh;
+  min-height: 60vh;
   text-align: center;
 }
 
@@ -593,75 +601,7 @@ span {
   max-height: 40px;
 }
 
-
-
-
-@media screen and (max-width: 790px) {
-#myVideo,
-#crest,
-#crest-background,
-#crest-background2,
-  header {
-    height: 75vh;
-  }
-
-  h1 {
-    font-size: 3em;
-    top: 120px;
-  }
-  .skill-section {
-    margin: 10px auto;
-    max-width: 500px;
-    width: 100%;
-  }
-  .skill-img {
-    width: 50%;
-  }
-  .nav-group {
-    pointer-events: none;
-    opacity: 0;
-    z-index: -2;
-  }
-  .project-section {
-    padding: 10px;
-  }
-  .project-content {
-    padding: 10px;
-    height: 50%;
-    width: 100%;
-  }
-  .project-content>h3 {
-    text-align: center;
-  }
-  .project-description {
-    height: 0px;
-    margin: 0;
-    overflow: hidden;
-  }
-  .view-buttons {
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-  }
-  .view-button {
-    margin: 5px;
-  }
-  .project-item:nth-of-type(even)>.project-content>.view-buttons {
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-  }
-  nav.mobile {
-    width: 100%;
-    height: auto;
-  }
-}
-
- /*Modal box for crest*/
+ /* ###### Modal box for crest  ###### */
 .crest-link {
    color: black;
    text-decoration: none;
@@ -760,7 +700,82 @@ border-left: 1px solid black;
 td {
 border-top: 1px solid black;
 }
-tr:first-child td:first-child{border-radius: 10px 0 0 0;}
-tr:first-child td:last-child {border-radius: 0 10px 0 0;}
-tr:last-child td:last-child  {border-radius: 0 0 10px 0;}
-tr:last-child td:first-child {border-radius: 0 0 0 10px;}
+tr:first-child td:first-child {border-radius: 10px 0 0 0;}
+tr:first-child td:last-child  {border-radius: 0 10px 0 0;}
+tr:last-child td:last-child   {border-radius: 0 0 10px 0;}
+tr:last-child td:first-child  {border-radius: 0 0 0 10px;}
+
+
+
+@media screen and (max-width: 790px) {
+#myVideo,
+#crest,
+#crest-background,
+#crest-background2,
+  header {
+    height: 75vh;
+  }
+
+  h1 {
+    font-size: 3em;
+    top: 120px;
+  }
+  .skill-section {
+    margin: 10px auto;
+    max-width: 500px;
+    width: 100%;
+  }
+  .skill-img {
+    width: 50%;
+  }
+  .nav-group {
+    pointer-events: none;
+    opacity: 0;
+    z-index: -2;
+  }
+  .project-item {
+    max-height: 33%;
+    min-height: 25%;
+    max-width: 520px;
+    padding: 20px 0px;
+  }
+  .project-section {
+    padding: 10px;
+  }
+  .project-content {
+    padding: 10px;
+    height: 90%;
+    width: 50%;
+    line-height: 0em;
+  }
+  .project-content>h3, p {
+    text-align: center;
+    line-height: 1em;
+  }
+  .project-description {
+    height: 0px;
+    margin: 0;
+    overflow: hidden;
+  }
+    .project-item:nth-of-type(even)>.project-content>.view-buttons {
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+  }
+  .view-buttons {
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+  }
+  .view-button {
+    margin: 5px;
+  }
+  nav.mobile {
+    width: 100%;
+    height: auto;
+  }
+}
