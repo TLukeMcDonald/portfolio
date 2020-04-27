@@ -16,8 +16,7 @@ $(() => {
   $(window).resize(() => {
     $(window).scroll();
   })
-
-
+  
 
   // create a size handler that gets certain needed sizes when asked
   const sizeHandler = {
